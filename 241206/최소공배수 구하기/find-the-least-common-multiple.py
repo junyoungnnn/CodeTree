@@ -1,9 +1,13 @@
+def gcd(a, b):
+    while b != 0:
+        temp = a % b
+        a = b
+        b = temp
+    return a
+
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
 n, m = map(int, input().split())
 
-if n > m:
-    n, m = m, n
-
-for i in range(1, n+1):
-    if i * m % n == 0:
-        print(i * m)
-        break
+print(lcm(n, m))
