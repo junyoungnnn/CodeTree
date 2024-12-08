@@ -1,7 +1,9 @@
 def callendar(M, D):
     month30 = [4, 6, 9, 11]
 
-    if D > 31:
+    if M > 12:
+        return False
+    elif D > 31:
         return False
     elif M == 2 and D > 28:
         return False
