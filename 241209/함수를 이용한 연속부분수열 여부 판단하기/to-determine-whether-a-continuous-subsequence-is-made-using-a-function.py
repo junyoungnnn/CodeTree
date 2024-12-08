@@ -1,6 +1,8 @@
 def cal():
     for j in range(n1):
         if b[0] == a[j]:
+            if j + n2 - 1 > n1:
+                return False
             if b[n2 - 1] == a[j + n2 - 1]:
                 return True
     return False
