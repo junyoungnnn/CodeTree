@@ -4,8 +4,9 @@ s2 = input()
 
 def findS():
     if s.find(s2):
-        print(s.find(s2))
+        idx = s.find(s2)
     else:
-        print(-1)
+        idx = -1
+    return idx
 
-findS()
+print(findS())
