@@ -2,7 +2,7 @@ m1, d1, m2, d2 = map(int, input().split())
 
 input_day = input()
 
-month = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+month = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 day = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
@@ -11,15 +11,21 @@ elapsed_days2 = 0
 
 for i in range(1, m1):
     elapsed_days1 += month[i]
-elapsed_days1 += d1
+elapsed_days1 += d1 -1
 
 for i in range(1, m2):
     elapsed_days2 += month[i]
-elapsed_days2 += d2
+elapsed_days2 += d2 -1
 
-count = (elapsed_days2 - elapsed_days1 + 2) // 7
+start_day_idx = 0
+day1_idx = (start_day_idx + elapsed_days1) % 7
+day2_idx = (start_day_idx + elapsed_days2) % 7
 
-if day[(elapsed_days2 - elapsed_days1) % 7] == input_day:
-    count += 1
+target_day_idx = day.index(input_day)
+
+count = 0
+for days in range(elapsed_days1, elapsed_days2 + 1):
+    if (start_day_idx + days) % 7 == target_day_idx:
+        count += 1
 
 print(count)
