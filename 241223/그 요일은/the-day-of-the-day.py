@@ -19,7 +19,7 @@ elapsed_days2 += d2
 
 count = (elapsed_days2 - elapsed_days1 + 2) // 7
 
-if day[(elapsed_days2 - elapsed_days1 + 1) % 7] == input_day:
+if day[(elapsed_days2 - elapsed_days1) % 7] == input_day:
     count += 1
 
 print(count)
