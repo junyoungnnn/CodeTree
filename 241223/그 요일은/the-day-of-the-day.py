@@ -20,7 +20,8 @@ target_day_idx = day.index(input_day)
 
 count = 0
 for days in range(elapsed_days1, elapsed_days2 + 1):
-    if (start_day_idx + days) % 7 == target_day_idx:
+    current_day_idx = (start_day_idx + days) % 7
+    if current_day_idx == target_day_idx:
         count += 1
 
 print(count)
