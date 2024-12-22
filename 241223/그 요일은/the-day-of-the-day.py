@@ -17,7 +17,7 @@ for i in range(1, m2):
     elapsed_days2 += month[i]
 elapsed_days2 += d2
 
-count = (elapsed_days2 - elapsed_days1 + 1) // 7
+count = (elapsed_days2 - elapsed_days1 + 2) // 7
 
 if day[(elapsed_days2 - elapsed_days1 + 1) % 7] == input_day:
     count += 1
