@@ -1,7 +1,7 @@
 n = int(input())
 
-arr = [0] * 201
-start = 0
+arr = [0] * 1001
+start = 500
 
 T2 = ''
 for i in range(n):
@@ -29,7 +29,6 @@ for i in range(n):
 
 count = 0
 c = 0
-
 for i in arr:
     if i >= 2:
         c += 1
