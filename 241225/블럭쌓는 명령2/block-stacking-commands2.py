@@ -1,7 +1,7 @@
 n, k = map(int, input().split())
 
 for i in range(k):
-    arr = [0] * n
+    arr = [0] * (n+1)
     count = 0
     maxValue = 0
     a, b = map(int, input().split())
