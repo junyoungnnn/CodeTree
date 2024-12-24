@@ -1,17 +1,10 @@
 n, k = map(int, input().split())
+arr = [0] * (n+1)
 
 for i in range(k):
-    arr = [0] * (n+1)
-    count = 0
-    maxValue = 0
     a, b = map(int, input().split())
     for j in range(a, b + 1):
-        arr[j] = 1
-    for i in arr:
-        if i == 1:
-            count += 1
-    if count > maxValue:
-        maxValue = count
+        arr[j] += 1
     
-print(maxValue)
+print(max(arr))
 
