@@ -10,5 +10,8 @@ for i in range(n):
         count = 1
     else:
         count += 1
+else:
+    if count > max_count:
+            max_count = count
 
 print(max_count)
