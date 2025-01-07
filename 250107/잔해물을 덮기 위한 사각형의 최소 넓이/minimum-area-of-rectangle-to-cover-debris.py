@@ -20,7 +20,7 @@ for i in range(x1, x2):
     for j in range(y1, y2):
         if arr[i][j] == 1:
             count += 1
-            
+
 max_width = 0
 max_height = 0
 
@@ -28,18 +28,24 @@ max_height = 0
 for i in [x1, x2-1]:
     count = 0
     for j in range(y1, y2):
-        if arr[i][j] == 1:
-            count += 1
-            if count > max_height:
-                max_height = count
+        if arr[i][y1] == 1 and arr[i][y2-1] == 1:
+            max_height = y2 - y1
+        else:
+            if arr[i][j] == 1:
+                count += 1
+                if count > max_height:
+                    max_height = count
 
 # x축 길이 찾기
 for i in [y1, y2-1]:
     count = 0
     for j in range(x1, x2):
-        if arr[j][i] == 1:
-            count += 1
-            if count > max_width:
-                max_width = count
+        if arr[x1][i] == 1 and arr[x2-1][i] == 1:
+            max_width = x2 - x1
+        else:
+            if arr[j][i] == 1:
+                count += 1
+                if count > max_width:
+                    max_width = count
 
 print(max_height * max_width)
