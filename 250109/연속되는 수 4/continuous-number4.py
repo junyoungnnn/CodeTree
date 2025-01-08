@@ -10,5 +10,7 @@ for i in range(n):
         if count > max_count:
             max_count = count
         count = 1
-
+else:
+    if count > max_count:
+        max_count = count
 print(max_count)
