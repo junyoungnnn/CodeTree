@@ -42,3 +42,5 @@ for i in range(len(arr1)):
     if arr1[i] == arr2[i]:
         print(i+1)
         break
+else:
+    print(-1)
