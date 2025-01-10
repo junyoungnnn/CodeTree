@@ -47,11 +47,11 @@ end = min(len(A), len(B))
 
 if end > len(A) - 1:
     for k in range(end, max(len(A), len(B))):
-        if A[end - 1] == B[k] and A[end - 2] != B[k-1]:
+        if A[end - 1] == B[k]:
             count += 1
 elif end < len(A) - 1:
     for k in range(end, max(len(A), len(B))):
-        if B[end - 1] == A[k] and B[end - 2] != A[k-1]:
+        if B[end - 1] == A[k]:
             count += 1
         
 print(count)
