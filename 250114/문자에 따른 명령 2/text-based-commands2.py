@@ -11,8 +11,6 @@ for i in c:
     elif i == 'R':
         dir_num = (dir_num + 1) % 4
     else:
-        break
-
-x, y = dx[dir_num], dy[dir_num]
+        x, y = dx[dir_num], dy[dir_num]
 
 print(x, y)
