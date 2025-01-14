@@ -4,25 +4,26 @@ r, c = int(r), int(c)
 
 arr = [[0] * n for _ in range(n)]
 
-dx, dy = [0, 1, 0, -1], [1, 0, -1, 0]
+dx, dy = [0, 1, -1, 0], [1, 0, 0, -1]
 
 directrion = {}
-directrion['U'] = 0
-directrion['R'] = 1
+directrion['R'] = 0
+directrion['U'] = 1
 directrion['D'] = 2
 directrion['L'] = 3
 
 def in_range(x, y):
-    return 1 <= x and x < n and 1 <= y and y < n
+    return 0 < x and x <= n and 0 < y and y <= n
 
 for i in range(t):
-    r += dy[directrion[d]]
-    c += dx[directrion[d]]
-    if not in_range(r, c):
-        directrion[d] = (2 + directrion[d]) % 4
-        r += dy[directrion[d]]
-        c += dx[directrion[d]]
-    
+    nx, ny = r + dx[directrion[d]], c + dy[directrion[d]]
+
+    if not in_range(nx, ny):
+        directrion[d] = 3 - directrion[d]
+    else:
+        r += dx[directrion[d]]
+        c += dy[directrion[d]]
+
 print(r, c)
 
 
