@@ -8,8 +8,8 @@ dx, dy = [0, 1, -1, 0], [1, 0, 0, -1]
 
 directrion = {}
 directrion['R'] = 0
-directrion['U'] = 1
-directrion['D'] = 2
+directrion['D'] = 1
+directrion['U'] = 2
 directrion['L'] = 3
 
 def in_range(x, y):
