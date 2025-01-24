@@ -4,7 +4,7 @@ board = [list(map(int, input().split())) for _ in range(N)]
 
 x, y = N // 2, N // 2
 
-dxs, dys= [0, -1, 0, 1], [1, 0, -1, 0]
+dxs, dys= [-1, 0, 1, 0], [0, 1, 0, -1]
 
 d = 0
 
