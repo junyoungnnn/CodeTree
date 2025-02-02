@@ -16,7 +16,8 @@ for i in range(n-2):
                 #print('반복시작', h)
                 #print((arr[i] % 10 + arr[j] % 10 + arr[k] % 10) % 10)
                 #print(max(arr[i] % 10, max(arr[j] % 10, arr[k] % 10)))
-                if (arr[i] % 10 + arr[j] % 10 + arr[k] % 10) % 10 < max(arr[i] % 10, max(arr[j] % 10, arr[k] % 10)):
+                #if arr[i] % 10 + arr[j] % 10 + arr[k] % 10 < max(arr[i] % 10, max(arr[j] % 10, arr[k] % 10)):
+                if (arr[i] % 10 + arr[j] % 10 + arr[k] % 10) // 10 != 0:  
                     value = 0
                     #print('arri, arrj, arrk 불충족', i, j, k)
                     break
