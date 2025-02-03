@@ -47,4 +47,5 @@ for i in range(0, n):
                             col = j - 1
                             row = i + 3
 print(win)
-print(row, col)
+if win != 0:
+    print(row, col)
