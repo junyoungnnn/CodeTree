@@ -6,14 +6,14 @@ for _ in range(n):
     x.append(int(pos))
     c.append(char)
 
-placed = [0] * 10000
+placed = [0] * 10001
 
 max_score = 0
 
 for i in range(n):
     placed[x[i]] = c[i]
 
-for i in range(1, 10000-k+1):
+for i in range(10000-k+1):
     score = 0
     for j in range(i, i+k+1):
         if placed[j] == 'G':
