@@ -7,16 +7,19 @@ for _ in range(N):
     candy.append(c)
     pos.append(p)
 
-arr = [0] * 101
+arr = [0] * 102
 
 for u, h in zip(candy, pos):
-    arr[h] = u
+    arr[h] += u
 
 max_candy = 0
 
-for i in range(K, 101-K):
+for i in range(101):
     value = 0
     for j in range(i-K, i+K+1):
+        if i-K < 0 or i+K > 101:
+            break
+
         value += arr[j]
     max_candy = max(max_candy, value)
 
@@ -24,3 +27,23 @@ print(max_candy)
 
 
 
+57
+83
+82
+7
+39
+23
+97
+44
+68
+82
+27
+0
+36
+69
+95
+80
+23
+92
+84
+89
