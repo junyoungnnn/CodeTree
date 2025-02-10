@@ -17,8 +17,8 @@ max_candy = 0
 for i in range(101):
     value = 0
     for j in range(i-K, i+K+1):
-        if i-K < 0 or i+K > 101:
-            break
+        if j < 0 or j > 101:
+            continue
 
         value += arr[j]
     max_candy = max(max_candy, value)
