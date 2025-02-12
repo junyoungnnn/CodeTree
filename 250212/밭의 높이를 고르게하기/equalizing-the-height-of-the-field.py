@@ -5,7 +5,7 @@ arr = list(map(int, input().split()))
 
 min_price = sys.maxsize
 
-for i in range(N-T):
+for i in range(N-T+1):
     price = 0
     for j in range(i, i + T):
         price += abs(H - arr[j])
