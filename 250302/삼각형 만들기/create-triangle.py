@@ -3,7 +3,7 @@ points = [tuple(map(int, input().split())) for _ in range(n)]
 x = [p[0] for p in points]
 y = [p[1] for p in points]
 
-maxX, maxY = 0, 0
+maxArea = 0
 
 def line(a, b, c):
     linex, liney = 0, 0
@@ -30,8 +30,7 @@ for i in range(0, n):
         for k in range(j+1, n):
             lineX, lineY = 0, 0
             lineX, lineY = line(i,j,k)
-            maxX = max(maxX, lineX)
-            maxY = max(maxY, lineY)
+            maxArea = max(maxArea, lineX *lineY)
 
-print(maxX * maxY)
+print(maxArea)
 
