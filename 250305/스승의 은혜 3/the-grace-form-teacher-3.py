@@ -6,24 +6,18 @@ maxCount = 0
 
 for i in range(n):
     count = 0
-    value = s[i][0] // 2 + s[i][1]
-
+    value = 0
     for j in range(n):
         if i == j:
-            continue
+            value += s[i][0] // 2 + s[i][1]
+        else:
+            value += s[j][0] + s[j][1]
 
-        count += 1
-        value += s[j][0] + s[j][1]
-        if value >= b:
+        if value <= b:
+            count += 1
+        else:
             break
-    else:
-        count += 1
 
     maxCount = max(maxCount, count)
 
 print(maxCount)
-
-
-
-
-        
