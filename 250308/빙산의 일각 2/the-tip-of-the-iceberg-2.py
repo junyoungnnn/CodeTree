@@ -9,7 +9,10 @@ maxCount = 0
 maxValue = max(arr)
 
 for i in range(1, maxValue):
-    count = 1
+    if arr[0] <= i:
+        count = 0
+    else:
+        count = 1
     for j in range(n-1):
         if arr[j] > i and arr[j+1] <= i:
             count += 1
