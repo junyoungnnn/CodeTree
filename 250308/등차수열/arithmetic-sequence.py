@@ -4,7 +4,7 @@ arr = list(map(int, input().split()))
 
 maxCount = 0
 
-for i in range(1, 51):
+for i in range(1, 100):
     count = 0
     for j in range(n):
         for h in range(j+1, n):
