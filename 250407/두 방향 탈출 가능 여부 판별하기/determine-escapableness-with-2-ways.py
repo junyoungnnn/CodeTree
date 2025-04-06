@@ -1,7 +1,7 @@
 N, M = map(int, input().split())
-gr = [list(map(int, input().split())) for _ in range(M)]
+gr = [list(map(int, input().split())) for _ in range(N)]
 
-visited = [[0 for i in range(N+1)] for _ in range(M+1)]
+visited = [[0 for i in range(M)] for _ in range(N)]
 
 row = [1, 0]
 col = [0, 1]
