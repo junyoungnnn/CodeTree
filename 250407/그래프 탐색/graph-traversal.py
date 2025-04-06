@@ -3,7 +3,7 @@ N, M = map(int, input().split())
 gr = [[] for _ in range(N+1)]
 
 visited = [0 for _ in range(N+1)]
-print(gr)
+
 cnt = 0
 
 def dfs(vertex):
